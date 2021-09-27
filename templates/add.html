@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  .takeimage{
+
+    float:right;
+    position:relative;
+   top:1px;
+   left: 10px;
+    
+}​
+
+  body{
+    background: rgb(219,226,226);
+  }
+  .row{
+    background: white;
+    border-radius: 30px;
+    height: 90%;
+    width: 100%;
+    box-shadow: 12px 12px 22px;
+  }
+  img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  
+
+  }
+.btn-1{
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 50%;
+  background: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+
+}
+.row.no-gutter {
+  margin-left: 20;
+  margin-right: 300;
+}
+ .btn-1:hover{
+   background: whitesmoke;
+   border: 1px solid;
+   color: black
+ }
+</style>
+<section class="Form my-5 mx-30">
+  <div class="container">
+    <div class="row no-gutters" >
+  
+
+      <div class="col-lg-5">
+      
+        <img  src="https://www.logolynx.com/images/logolynx/d5/d583ac28e3e10df8a49111314388956f.jpeg" class="img-fluid" alt="" width="500" height="600"/>
+
+    </div>
+    <div class="col-lg-7 px-5 pt-5">
+
+      <form action = "/add" method = "POST">
+        <div class="form-row"> 
+          
+    <h1 class="font-weight-bold py-3 " > Registration </h1>
+    <div class="col-lg-7">
+      <input type="text" placeholder="Enter Name" name="name" class="form-control my-2 p-2"/>
+       
+    </div>
+    
+        </div>
+        
+        <div class="form-row"> 
+          
+    
+          <div class="col-lg-7">
+            <input type="text" placeholder="Enter Registration ID" name="register" class="form-control my-2 p-2"/>
+       
+             
+          </div>
+          <div class="form-row"> 
+          
+    
+            <div class="col-lg-7">
+              <input type="text" placeholder="Email Address"name ="email" class="form-control my-2 p-2"/>
+         
+               
+            </div>
+            <div class="form-row"> 
+          
+    
+              <div class="col-lg-7">
+                <input type="text" placeholder="Department" name="department" class="form-control my-2 p-2"/>
+           
+                 
+              </div>
+              <div class="form-row"> 
+          
+    
+                <div class="col-lg-7">
+                  <input type="text" placeholder="Phone Number" name ="phone"class="form-control my-2 p-2"/>
+             
+                   
+                </div>
+          
+              </div>
+              <div class="form-row"> 
+          
+    
+                <div class="col-lg-7">
+                 <button type="submit" class="btn-1">
+                   Submit
+                 </button>
+                 
+                   
+                </div>
+                
+                    </div>
+
+                
+          
+   
+                
+                    </div>
+    
+      </form>
+      
+   
+    </div>
+
+
+  </div>
+
+
+</section>
+  
+{% endblock body %}

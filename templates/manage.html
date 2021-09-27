@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+
+    <div class="jumbotron">
+        <div class="card">
+            <h5 class="card-header">Staff Data </h5>
+            <div class="card-body">
+         
+              <table class="table table-dark table-striped table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Sno</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Registration #</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Department </th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for staff in data %}
+                        
+                  
+                  <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{staff.name}}</td>
+                    <td>{{staff.register}}</td>
+                    <td>{{staff.email}}</td>
+                    <td>{{staff.department}}</td>
+                    <td>{{staff.phone}}</td>
+                    <td><a href="/update/{{staff.id}}" type="button" class="btn btn-primary badge-pill">Edit</button>
+                        <a href="/delete/{{staff.id}}" type="button" class="btn btn-danger badge-pill">Delete</button>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                
+                </tbody>
+              </table>
+             
+            </div>
+          </div>
+    </div>
+</div>
+
+    
+{% endblock body %}
